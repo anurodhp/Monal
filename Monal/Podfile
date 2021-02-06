@@ -58,8 +58,7 @@ target 'monalxmpp' do
   pod 'SignalProtocolC'
   pod 'sqlite3/perf-threadsafe', inhibit_warnings: true
 
-  #this is only for ios12. Remove for mac builds.
-  ###ios_only###pod 'OpenSSL-Universal', '1.1.180'
+  pod 'OpenSSL-Universal', '1.1.180'
 end
 
 # see https://stackoverflow.com/a/36547646/3528174
