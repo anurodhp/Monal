@@ -25,7 +25,7 @@
                BlueprintIdentifier = "2630FE2E1AD550C00079F5C0"
                BuildableName = "Monal Tests.xctest"
                BlueprintName = "Monal Tests"
-               ReferencedContainer = "container:Monal.xcodeproj">
+               ReferencedContainer = "container:Vaccine Alert.xcodeproj">
             </BuildableReference>
          </TestableReference>
          <TestableReference
@@ -35,7 +35,7 @@
                BlueprintIdentifier = "C1850EB425F38A2D003D506A"
                BuildableName = "MonalUITests.xctest"
                BlueprintName = "MonalUITests"
-               ReferencedContainer = "container:Monal.xcodeproj">
+               ReferencedContainer = "container:Vaccine Alert.xcodeproj">
             </BuildableReference>
          </TestableReference>
          <TestableReference
@@ -45,7 +45,7 @@
                BlueprintIdentifier = "C1850EB425F38A2D003D506A"
                BuildableName = "MonalUITests.xctest"
                BlueprintName = "MonalUITests"
-               ReferencedContainer = "container:Monal.xcodeproj">
+               ReferencedContainer = "container:Vaccine Alert.xcodeproj">
             </BuildableReference>
          </TestableReference>
          <TestableReference
@@ -55,7 +55,7 @@
                BlueprintIdentifier = "C1850EB425F38A2D003D506A"
                BuildableName = "MonalUITests.xctest"
                BlueprintName = "MonalUITests"
-               ReferencedContainer = "container:Monal.xcodeproj">
+               ReferencedContainer = "container:Vaccine Alert.xcodeproj">
             </BuildableReference>
          </TestableReference>
          <TestableReference
@@ -65,7 +65,7 @@
                BlueprintIdentifier = "C1850EB425F38A2D003D506A"
                BuildableName = "MonalUITests.xctest"
                BlueprintName = "MonalUITests"
-               ReferencedContainer = "container:Monal.xcodeproj">
+               ReferencedContainer = "container:Vaccine Alert.xcodeproj">
             </BuildableReference>
          </TestableReference>
       </Testables>
@@ -86,8 +86,8 @@
             BuildableIdentifier = "primary"
             BlueprintIdentifier = "1D6058900D05DD3D006BFB54"
             BuildableName = "Monal.app"
-            BlueprintName = "Monal"
-            ReferencedContainer = "container:Monal.xcodeproj">
+            BlueprintName = "Vaccine Alert"
+            ReferencedContainer = "container:Vaccine Alert.xcodeproj">
          </BuildableReference>
       </BuildableProductRunnable>
    </LaunchAction>
@@ -102,8 +102,8 @@
             BuildableIdentifier = "primary"
             BlueprintIdentifier = "1D6058900D05DD3D006BFB54"
             BuildableName = "Monal.app"
-            BlueprintName = "Monal"
-            ReferencedContainer = "container:Monal.xcodeproj">
+            BlueprintName = "Vaccine Alert"
+            ReferencedContainer = "container:Vaccine Alert.xcodeproj">
          </BuildableReference>
       </MacroExpansion>
    </ProfileAction>

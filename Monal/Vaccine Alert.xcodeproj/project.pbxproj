@@ -1914,9 +1914,9 @@
 /* End PBXHeadersBuildPhase section */
 
 /* Begin PBXNativeTarget section */
-		1D6058900D05DD3D006BFB54 /* Monal */ = {
+		1D6058900D05DD3D006BFB54 /* Vaccine Alert */ = {
 			isa = PBXNativeTarget;
-			buildConfigurationList = 1D6058960D05DD3E006BFB54 /* Build configuration list for PBXNativeTarget "Monal" */;
+			buildConfigurationList = 1D6058960D05DD3E006BFB54 /* Build configuration list for PBXNativeTarget "Vaccine Alert" */;
 			buildPhases = (
 				0105BB524F492059A59FAB32 /* [CP] Check Pods Manifest.lock */,
 				2665C11B1C4ABF0B00CC9A04 /* Build number */,
@@ -1937,7 +1937,7 @@
 				2638008A2374814000144929 /* PBXTargetDependency */,
 				26AA701B2146BBB900598605 /* PBXTargetDependency */,
 			);
-			name = Monal;
+			name = "Vaccine Alert";
 			productName = SworIM;
 			productReference = 26080210110ABA4E005E194D /* Monal.app */;
 			productType = "com.apple.product-type.application";
@@ -2098,7 +2098,7 @@
 					};
 				};
 			};
-			buildConfigurationList = C01FCF4E08A954540054247B /* Build configuration list for PBXProject "Monal" */;
+			buildConfigurationList = C01FCF4E08A954540054247B /* Build configuration list for PBXProject "Vaccine Alert" */;
 			compatibilityVersion = "Xcode 3.2";
 			developmentRegion = en;
 			hasScannedForEncodings = 1;
@@ -2146,7 +2146,7 @@
 			projectRoot = "";
 			targets = (
 				268BCD55140B25CC0025E4D1 /* jrtplib-static */,
-				1D6058900D05DD3D006BFB54 /* Monal */,
+				1D6058900D05DD3D006BFB54 /* Vaccine Alert */,
 				26AA70102146BBB800598605 /* shareSheet */,
 				260773BF232FC4E800BFD50F /* NotificaionService */,
 				26CC579123A0867400ABB92A /* monalxmpp */,
@@ -2700,7 +2700,7 @@
 		};
 		C1850EBB25F38A2D003D506A /* PBXTargetDependency */ = {
 			isa = PBXTargetDependency;
-			target = 1D6058900D05DD3D006BFB54 /* Monal */;
+			target = 1D6058900D05DD3D006BFB54 /* Vaccine Alert */;
 			targetProxy = C1850EBA25F38A2D003D506A /* PBXContainerItemProxy */;
 		};
 /* End PBXTargetDependency section */
@@ -4216,7 +4216,7 @@
 /* End XCBuildConfiguration section */
 
 /* Begin XCConfigurationList section */
-		1D6058960D05DD3E006BFB54 /* Build configuration list for PBXNativeTarget "Monal" */ = {
+		1D6058960D05DD3E006BFB54 /* Build configuration list for PBXNativeTarget "Vaccine Alert" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (
 				1D6058940D05DD3E006BFB54 /* Debug */,
@@ -4266,7 +4266,7 @@
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Debug;
 		};
-		C01FCF4E08A954540054247B /* Build configuration list for PBXProject "Monal" */ = {
+		C01FCF4E08A954540054247B /* Build configuration list for PBXProject "Vaccine Alert" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (
 				C01FCF4F08A954540054247B /* Debug */,

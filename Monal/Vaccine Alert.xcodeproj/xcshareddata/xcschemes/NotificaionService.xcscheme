@@ -2,7 +2,7 @@
 <Scheme
    LastUpgradeVersion = "1220"
    wasCreatedForAppExtension = "YES"
-   version = "2.0">
+   version = "1.3">
    <BuildAction
       parallelizeBuildables = "YES"
       buildImplicitDependencies = "YES">
@@ -15,10 +15,10 @@
             buildForAnalyzing = "YES">
             <BuildableReference
                BuildableIdentifier = "primary"
-               BlueprintIdentifier = "26AA70102146BBB800598605"
-               BuildableName = "shareSheet.appex"
-               BlueprintName = "shareSheet"
-               ReferencedContainer = "container:Monal.xcodeproj">
+               BlueprintIdentifier = "260773BF232FC4E800BFD50F"
+               BuildableName = "NotificaionService.appex"
+               BlueprintName = "NotificaionService"
+               ReferencedContainer = "container:Vaccine Alert.xcodeproj">
             </BuildableReference>
          </BuildActionEntry>
          <BuildActionEntry
@@ -31,8 +31,8 @@
                BuildableIdentifier = "primary"
                BlueprintIdentifier = "1D6058900D05DD3D006BFB54"
                BuildableName = "Monal.app"
-               BlueprintName = "Monal"
-               ReferencedContainer = "container:Monal.xcodeproj">
+               BlueprintName = "Vaccine Alert"
+               ReferencedContainer = "container:Vaccine Alert.xcodeproj">
             </BuildableReference>
          </BuildActionEntry>
       </BuildActionEntries>
@@ -47,10 +47,10 @@
             skipped = "NO">
             <BuildableReference
                BuildableIdentifier = "primary"
-               BlueprintIdentifier = "C1850E7225F383F3003D506A"
+               BlueprintIdentifier = "C1850EB425F38A2D003D506A"
                BuildableName = "MonalUITests.xctest"
                BlueprintName = "MonalUITests"
-               ReferencedContainer = "container:Monal.xcodeproj">
+               ReferencedContainer = "container:Vaccine Alert.xcodeproj">
             </BuildableReference>
          </TestableReference>
       </Testables>
@@ -60,23 +60,30 @@
       selectedDebuggerIdentifier = ""
       selectedLauncherIdentifier = "Xcode.IDEFoundation.Launcher.PosixSpawn"
       launchStyle = "0"
-      askForAppToLaunch = "Yes"
       useCustomWorkingDirectory = "NO"
       ignoresPersistentStateOnLaunch = "NO"
       debugDocumentVersioning = "YES"
       debugServiceExtension = "internal"
-      allowLocationSimulation = "YES"
-      launchAutomaticallySubstyle = "2">
+      allowLocationSimulation = "YES">
       <BuildableProductRunnable
          runnableDebuggingMode = "0">
          <BuildableReference
             BuildableIdentifier = "primary"
-            BlueprintIdentifier = "1D6058900D05DD3D006BFB54"
-            BuildableName = "Monal.app"
-            BlueprintName = "Monal"
-            ReferencedContainer = "container:Monal.xcodeproj">
+            BlueprintIdentifier = "260773BF232FC4E800BFD50F"
+            BuildableName = "NotificaionService.appex"
+            BlueprintName = "NotificaionService"
+            ReferencedContainer = "container:Vaccine Alert.xcodeproj">
          </BuildableReference>
       </BuildableProductRunnable>
+      <MacroExpansion>
+         <BuildableReference
+            BuildableIdentifier = "primary"
+            BlueprintIdentifier = "1D6058900D05DD3D006BFB54"
+            BuildableName = "Monal.app"
+            BlueprintName = "Vaccine Alert"
+            ReferencedContainer = "container:Vaccine Alert.xcodeproj">
+         </BuildableReference>
+      </MacroExpansion>
    </LaunchAction>
    <ProfileAction
       buildConfiguration = "Debug"
@@ -92,8 +99,8 @@
             BuildableIdentifier = "primary"
             BlueprintIdentifier = "1D6058900D05DD3D006BFB54"
             BuildableName = "Monal.app"
-            BlueprintName = "Monal"
-            ReferencedContainer = "container:Monal.xcodeproj">
+            BlueprintName = "Vaccine Alert"
+            ReferencedContainer = "container:Vaccine Alert.xcodeproj">
          </BuildableReference>
       </BuildableProductRunnable>
    </ProfileAction>
