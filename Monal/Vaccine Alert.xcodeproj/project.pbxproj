@@ -684,10 +684,6 @@
 		26F9794C1ACAC73A0008E005 /* MLContactCell.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = MLContactCell.xib; sourceTree = "<group>"; };
 		26FB468D18B2755A0043094F /* IPAddress.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = IPAddress.h; sourceTree = "<group>"; };
 		26FB468E18B2755A0043094F /* IPAddress.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = IPAddress.m; sourceTree = "<group>"; };
-		26FC619124EB6C220094C302 /* en */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = en; path = localization/external/en.lproj/Main.strings; sourceTree = SOURCE_ROOT; };
-		26FC619224EB6C240094C302 /* en */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = en; path = localization/external/en.lproj/Login.strings; sourceTree = SOURCE_ROOT; };
-		26FC619324EB6C250094C302 /* en */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = en; path = localization/external/en.lproj/Settings.strings; sourceTree = SOURCE_ROOT; };
-		26FC619524EB6C270094C302 /* en */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = en; path = localization/external/en.lproj/iosShare.strings; sourceTree = "<group>"; };
 		26FDB4341DC16A9800A129E0 /* Monal.entitlements */ = {isa = PBXFileReference; lastKnownFileType = text.plist.entitlements; path = Monal.entitlements; sourceTree = "<group>"; };
 		26FE3BC91C61A6C3003CC230 /* MLResizingTextView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MLResizingTextView.h; sourceTree = "<group>"; };
 		26FE3BCA1C61A6C3003CC230 /* MLResizingTextView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MLResizingTextView.m; sourceTree = "<group>"; };
@@ -2391,7 +2387,6 @@
 			isa = PBXVariantGroup;
 			children = (
 				26AA70172146BBB900598605 /* Base */,
-				26FC619524EB6C270094C302 /* en */,
 			);
 			name = iosShare.storyboard;
 			sourceTree = "<group>";
@@ -2400,7 +2395,6 @@
 			isa = PBXVariantGroup;
 			children = (
 				26E8462324EABAD600ECE419 /* Base */,
-				26FC619324EB6C250094C302 /* en */,
 			);
 			name = Settings.storyboard;
 			sourceTree = SOURCE_ROOT;
@@ -2409,7 +2403,6 @@
 			isa = PBXVariantGroup;
 			children = (
 				26E8462624EABAE200ECE419 /* Base */,
-				26FC619224EB6C240094C302 /* en */,
 			);
 			name = Login.storyboard;
 			sourceTree = SOURCE_ROOT;
@@ -2418,7 +2411,6 @@
 			isa = PBXVariantGroup;
 			children = (
 				26E8462924EABAED00ECE419 /* Base */,
-				26FC619124EB6C220094C302 /* en */,
 			);
 			name = Main.storyboard;
 			sourceTree = SOURCE_ROOT;
