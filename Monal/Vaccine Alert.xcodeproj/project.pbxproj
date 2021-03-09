@@ -196,7 +196,6 @@
 		26D7C05E23D6AFD800CA123C /* MLChatInputContainer.m in Sources */ = {isa = PBXBuildFile; fileRef = 26D7C05D23D6AFD800CA123C /* MLChatInputContainer.m */; };
 		26D89F061A890672009B147C /* MLSwitchCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 26D89F051A890672009B147C /* MLSwitchCell.m */; };
 		26E3ED871FEC0CB7008ABDA5 /* MLServerDetails.m in Sources */ = {isa = PBXBuildFile; fileRef = 26E3ED861FEC0CB7008ABDA5 /* MLServerDetails.m */; };
-		26E8462224EABAD600ECE419 /* Settings.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 26E8462424EABAD600ECE419 /* Settings.storyboard */; };
 		26E8462524EABAE200ECE419 /* Login.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 26E8462724EABAE200ECE419 /* Login.storyboard */; };
 		26E8462824EABAED00ECE419 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 26E8462A24EABAED00ECE419 /* Main.storyboard */; };
 		26E88CDA23F3C6B8001E9478 /* MLCrypto.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 26A711DD23C4D67400FC6A86 /* MLCrypto.framework */; };
@@ -659,7 +658,6 @@
 		26DE9C050FEEFD00000596F6 /* DB definitions */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = "DB definitions"; sourceTree = "<group>"; };
 		26E3ED851FEC0CB7008ABDA5 /* MLServerDetails.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = MLServerDetails.h; sourceTree = "<group>"; };
 		26E3ED861FEC0CB7008ABDA5 /* MLServerDetails.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = MLServerDetails.m; sourceTree = "<group>"; };
-		26E8462324EABAD600ECE419 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = localization/Base.lproj/Settings.storyboard; sourceTree = "<group>"; };
 		26E8462624EABAE200ECE419 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = localization/Base.lproj/Login.storyboard; sourceTree = "<group>"; };
 		26E8462924EABAED00ECE419 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = localization/Base.lproj/Main.storyboard; sourceTree = "<group>"; };
 		26EC40FA17BDD8560031304D /* ContactDetails.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ContactDetails.h; sourceTree = "<group>"; };
@@ -1046,7 +1044,6 @@
 		2644D4961FF29E1900F46AB5 /* Settings */ = {
 			isa = PBXGroup;
 			children = (
-				26E8462424EABAD600ECE419 /* Settings.storyboard */,
 				26B51C4618654D98002134C3 /* LogViewController.h */,
 				26B51C4718654D98002134C3 /* LogViewController.m */,
 				2644D4971FF29E5600F46AB5 /* MLSettingsTableViewController.h */,
@@ -1919,7 +1916,6 @@
 				262E51981AD8CB7200788351 /* MLTextInputCell.xib in Resources */,
 				2649CE531C51B84C00CD1E80 /* Launch Screen.storyboard in Resources */,
 				26F9794D1ACAC73A0008E005 /* MLContactCell.xib in Resources */,
-				26E8462224EABAD600ECE419 /* Settings.storyboard in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -2390,14 +2386,6 @@
 			);
 			name = iosShare.storyboard;
 			sourceTree = "<group>";
-		};
-		26E8462424EABAD600ECE419 /* Settings.storyboard */ = {
-			isa = PBXVariantGroup;
-			children = (
-				26E8462324EABAD600ECE419 /* Base */,
-			);
-			name = Settings.storyboard;
-			sourceTree = SOURCE_ROOT;
 		};
 		26E8462724EABAE200ECE419 /* Login.storyboard */ = {
 			isa = PBXVariantGroup;
