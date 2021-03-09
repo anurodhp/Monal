@@ -1,8 +1,0 @@
-[submodule "Monal/localization/external"]
-	path = Monal/localization/external
-	url = https://github.com/monal-im/Monal-localization-main.git
-	branch = main
-[submodule "Monal/shareSheet-iOS/localization/external"]
-	path = Monal/shareSheet-iOS/localization/external
-	url = https://github.com/monal-im/Monal-localization-shareSheet.git
-	branch = main
