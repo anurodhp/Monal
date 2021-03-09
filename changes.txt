@@ -1,0 +1,5 @@
+commit a5ef2763a4449b734de5818c335f030f34776742
+Author: Thilo Molitor <thilo@eightysoft.de>
+Date:   Tue Mar 9 02:53:51 2021 +0100
+
+    Remove sync error notifications in NSE as soon as possible
