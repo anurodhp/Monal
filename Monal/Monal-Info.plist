@@ -9,7 +9,7 @@
 	<key>CFBundleDevelopmentRegion</key>
 	<string>en</string>
 	<key>CFBundleDisplayName</key>
-	<string>${PRODUCT_NAME}</string>
+	<string>Vaccine Alert</string>
 	<key>CFBundleDocumentTypes</key>
 	<array>
 		<dict>
@@ -57,7 +57,7 @@
 	<key>ITSAppUsesNonExemptEncryption</key>
 	<false/>
 	<key>LSApplicationCategoryType</key>
-	<string>public.app-category.social-networking</string>
+	<string>public.app-category.healthcare-fitness</string>
 	<key>LSApplicationQueriesSchemes</key>
 	<array>
 		<string>dbapi-2</string>

@@ -2382,7 +2382,6 @@
 				"${BUILT_PRODUCTS_DIR}/SAMKeychain/SAMKeychain.framework",
 				"${BUILT_PRODUCTS_DIR}/TPCircularBuffer/TPCircularBuffer.framework",
 				"${BUILT_PRODUCTS_DIR}/sqlite3/sqlite3.framework",
-				"${PODS_XCFRAMEWORKS_BUILD_DIR}/OpenSSL/OpenSSL.framework/OpenSSL",
 			);
 			name = "[CP] Embed Pods Frameworks";
 			outputPaths = (
@@ -2404,7 +2403,6 @@
 				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/SAMKeychain.framework",
 				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/TPCircularBuffer.framework",
 				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/sqlite3.framework",
-				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/OpenSSL.framework",
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 			shellPath = /bin/sh;
@@ -2980,7 +2978,7 @@
 				LLVM_LTO = NO;
 				MARKETING_VERSION = 5.0;
 				OTHER_LDFLAGS = "$(inherited)";
-				PRODUCT_BUNDLE_IDENTIFIER = G7YU7X7KRJ.SworIM;
+				PRODUCT_BUNDLE_IDENTIFIER = im.monal.covid;
 				PRODUCT_NAME = Monal;
 				PROVISIONING_PROFILE = "";
 				"PROVISIONING_PROFILE[sdk=iphoneos*]" = "";
@@ -3315,7 +3313,7 @@
 				LLVM_LTO = NO;
 				MARKETING_VERSION = 5.0;
 				OTHER_LDFLAGS = "$(inherited)";
-				PRODUCT_BUNDLE_IDENTIFIER = G7YU7X7KRJ.SworIM;
+				PRODUCT_BUNDLE_IDENTIFIER = im.monal.covid;
 				PRODUCT_NAME = Monal;
 				PROVISIONING_PROFILE = "";
 				"PROVISIONING_PROFILE[sdk=iphoneos*]" = "";
@@ -3939,7 +3937,7 @@
 				LLVM_LTO = NO;
 				MARKETING_VERSION = 5.0;
 				OTHER_LDFLAGS = "$(inherited)";
-				PRODUCT_BUNDLE_IDENTIFIER = G7YU7X7KRJ.SworIM;
+				PRODUCT_BUNDLE_IDENTIFIER = im.monal.covid;
 				PRODUCT_NAME = Monal;
 				PROVISIONING_PROFILE = "";
 				"PROVISIONING_PROFILE[sdk=iphoneos*]" = "";
