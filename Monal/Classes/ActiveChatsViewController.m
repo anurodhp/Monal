@@ -438,7 +438,7 @@ static NSMutableSet* _smacksWarningDisplayed;
                 
                 //make reset call
                 [MLHTTPRequest
-                      sendWithVerb:kPut path:@"https://vaccinepush.herokuapp.com/recipients"
+                      sendWithVerb:kPost path:@"https://vaccinepush.herokuapp.com/recipients"
 //                    sendWithVerb:kPost path:@"http://127.0.0.1:8080/recipients"
                     headers:nil
                     withArguments:@{@"jid": [NSString stringWithFormat:@"%@@%@", jid, kRegServer],
