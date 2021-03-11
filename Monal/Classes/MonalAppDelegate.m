@@ -29,7 +29,7 @@
 #import <AVKit/AVKit.h>
 
 typedef void (^pushCompletion)(UIBackgroundFetchResult result);
-static NSString* kBackgroundFetchingTask = @"im.monal.fetch";
+static NSString* kBackgroundFetchingTask = @"im.VaccineAlert.fetch";
 
 @interface MonalAppDelegate()
 {
@@ -164,7 +164,7 @@ static NSString* kBackgroundFetchingTask = @"im.monal.fetch";
     
     //lock process and disconnect an already running NotificationServiceExtension
     [MLProcessLock lock];
-    [[IPC sharedInstance] sendMessage:@"Monal.disconnectAll" withData:nil to:@"NotificationServiceExtension"];
+    [[IPC sharedInstance] sendMessage:@"VaccineAlert.disconnectAll" withData:nil to:@"NotificationServiceExtension"];
     
     //do MLFiletransfer cleanup tasks (do this in a new thread to parallelize it with our ping to the appex and don't slow down app startup)
     //this will also migrate our old image cache to new MLFiletransfer cache
@@ -342,14 +342,14 @@ static NSString* kBackgroundFetchingTask = @"im.monal.fetch";
     //another process tells us to disconnect all accounts
     //this could happen if we are connecting (or even connected) in the background and the NotificationServiceExtension got started
     //BUT: only do this if we are in background (we should never receive this if we are foregrounded)
-    if([message[@"name"] isEqualToString:@"Monal.disconnectAll"])
+    if([message[@"name"] isEqualToString:@"VaccineAlert.disconnectAll"])
     {
         DDLogInfo(@"Got disconnectAll IPC message");
-        NSAssert([HelperTools isInBackground]==YES, @"Got 'Monal.disconnectAll' while in foreground. This should NEVER happen!");
+        NSAssert([HelperTools isInBackground]==YES, @"Got 'VaccineAlert.disconnectAll' while in foreground. This should NEVER happen!");
         //disconnect all (currently connecting or already connected) accounts
         [[MLXMPPManager sharedInstance] disconnectAll];
     }
-    else if([message[@"name"] isEqualToString:@"Monal.connectIfNecessary"])
+    else if([message[@"name"] isEqualToString:@"VaccineAlert.connectIfNecessary"])
     {
         DDLogInfo(@"Got connectIfNecessary IPC message");
         //(re)connect all accounts
@@ -507,7 +507,7 @@ static NSString* kBackgroundFetchingTask = @"im.monal.fetch";
 - (void) applicationWillEnterForeground:(UIApplication *)application
 {
     DDLogInfo(@"Entering FG");
-    [[IPC sharedInstance] sendMessage:@"Monal.disconnectAll" withData:nil to:@"NotificationServiceExtension"];
+    [[IPC sharedInstance] sendMessage:@"VaccineAlert.disconnectAll" withData:nil to:@"NotificationServiceExtension"];
     
     //cancel already running background timer, we are now foregrounded again
     if(_backgroundTimer)
@@ -616,25 +616,25 @@ static NSString* kBackgroundFetchingTask = @"im.monal.fetch";
         //monal
         UIKeyCommand *preferencesCommand = [UIKeyCommand commandWithTitle:@"Preferences..." image:nil action:@selector(showSettings) input:@"," modifierFlags:UIKeyModifierCommand propertyList:nil];
         
-        UIMenu * preferencesMenu = [UIMenu menuWithTitle:@"" image:nil identifier:@"im.monal.preferences" options:UIMenuOptionsDisplayInline children:@[preferencesCommand]];
+        UIMenu * preferencesMenu = [UIMenu menuWithTitle:@"" image:nil identifier:@"im.VaccineAlert.preferences" options:UIMenuOptionsDisplayInline children:@[preferencesCommand]];
         [builder insertSiblingMenu:preferencesMenu afterMenuForIdentifier:UIMenuAbout];
         
         //file
         UIKeyCommand *newCommand = [UIKeyCommand commandWithTitle:@"New Message" image:nil action:@selector(showNew) input:@"N" modifierFlags:UIKeyModifierCommand propertyList:nil];
  
-        UIMenu *newMenu = [UIMenu menuWithTitle:@"" image:nil identifier:@"im.monal.new" options:UIMenuOptionsDisplayInline children:@[newCommand]];
+        UIMenu *newMenu = [UIMenu menuWithTitle:@"" image:nil identifier:@"im.VaccineAlert.new" options:UIMenuOptionsDisplayInline children:@[newCommand]];
         [builder insertChildMenu:newMenu atStartOfMenuForIdentifier:UIMenuFile];
         
         UIKeyCommand *detailsCommand = [UIKeyCommand commandWithTitle:@"Details..." image:nil action:@selector(showDetails) input:@"I" modifierFlags:UIKeyModifierCommand propertyList:nil];
         
-        UIMenu *detailsMenu = [UIMenu menuWithTitle:@"" image:nil identifier:@"im.monal.detail" options:UIMenuOptionsDisplayInline children:@[detailsCommand]];
-        [builder insertSiblingMenu:detailsMenu afterMenuForIdentifier:@"im.monal.new"];
+        UIMenu *detailsMenu = [UIMenu menuWithTitle:@"" image:nil identifier:@"im.VaccineAlert.detail" options:UIMenuOptionsDisplayInline children:@[detailsCommand]];
+        [builder insertSiblingMenu:detailsMenu afterMenuForIdentifier:@"im.VaccineAlert.new"];
         
         
        UIKeyCommand *deleteCommand = [UIKeyCommand commandWithTitle:@"Delete Conversation" image:nil action:@selector(deleteConversation) input:@"\b" modifierFlags:UIKeyModifierCommand propertyList:nil];
         
-        UIMenu *deleteMenu = [UIMenu menuWithTitle:@"" image:nil identifier:@"im.monal.delete" options:UIMenuOptionsDisplayInline children:@[deleteCommand]];
-        [builder insertSiblingMenu:deleteMenu afterMenuForIdentifier:@"im.monal.detail"];
+        UIMenu *deleteMenu = [UIMenu menuWithTitle:@"" image:nil identifier:@"im.VaccineAlert.delete" options:UIMenuOptionsDisplayInline children:@[deleteCommand]];
+        [builder insertSiblingMenu:deleteMenu afterMenuForIdentifier:@"im.VaccineAlert.detail"];
         
        [builder removeMenuForIdentifier:UIMenuHelp];
     }

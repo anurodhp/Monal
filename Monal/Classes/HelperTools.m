@@ -45,7 +45,7 @@ void logException(NSException* exception)
 {
     if (@available(iOS 13.0, *))        // for ios 13 onwards
         return @{
-            @"jid": @"ios13push.monal.im",
+            @"jid": @"push.ma.covid.monal.im",
         };
     else                                // for ios 12
         return @{
