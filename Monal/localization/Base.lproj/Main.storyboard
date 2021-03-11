@@ -108,11 +108,11 @@
             </objects>
             <point key="canvasLocation" x="-3851" y="-784"/>
         </scene>
-        <!--Chats-->
+        <!--Messages-->
         <scene sceneID="vAl-ec-NFW">
             <objects>
                 <splitViewController presentsWithGesture="NO" id="dqD-Rt-bEF" sceneMemberID="viewController">
-                    <tabBarItem key="tabBarItem" title="Chats" image="906-chat-3" id="jh7-be-VPo"/>
+                    <tabBarItem key="tabBarItem" title="Messages" image="906-chat-3" id="jh7-be-VPo"/>
                     <connections>
                         <outlet property="delegate" destination="ncC-uM-uuw" id="L3K-5f-uMh"/>
                         <segue destination="rFS-eK-Dxd" kind="relationship" relationship="masterViewController" id="O9T-Gg-eaS"/>
