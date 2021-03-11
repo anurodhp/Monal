@@ -16,8 +16,8 @@ static const DDLogLevel ddLogLevel = DDLogLevelVerbose;
 
 
 //configure app group constants
-#define kAppGroup @"group.monal"
-#define kMonalKeychainName @"Monal"
+#define kAppGroup @"group.monal.covid"
+#define kMonalKeychainName @"VaccineAlert"
 
 //this is in seconds
 #if TARGET_OS_MACCATALYST
