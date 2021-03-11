@@ -83,7 +83,7 @@
                             <outlet property="delegate" destination="wDx-jI-G7L" id="VQl-ok-BfC"/>
                         </connections>
                     </tableView>
-                    <navigationItem key="navigationItem" title="Chats" id="RRa-hC-xrf"/>
+                    <navigationItem key="navigationItem" title="Messages" id="RRa-hC-xrf"/>
                     <connections>
                         <segue destination="Dhn-Pm-OVk" kind="showDetail" identifier="showConversation" id="RLU-kt-b8r"/>
                     </connections>
