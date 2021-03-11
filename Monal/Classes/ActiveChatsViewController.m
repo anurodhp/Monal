@@ -659,7 +659,7 @@ static NSMutableSet* _smacksWarningDisplayed;
 
 - (NSAttributedString *)titleForEmptyDataSet:(UIScrollView *)scrollView
 {
-    NSString* text = NSLocalizedString(@"No one is here", @"");
+    NSString* text = NSLocalizedString(@"Welcome to Vaccine Alert", @"");
     
     NSDictionary* attributes = @{NSFontAttributeName: [UIFont boldSystemFontOfSize:18.0f],
                                  NSForegroundColorAttributeName: [UIColor darkGrayColor]};
@@ -669,7 +669,7 @@ static NSMutableSet* _smacksWarningDisplayed;
 
 - (NSAttributedString *)descriptionForEmptyDataSet:(UIScrollView *)scrollView
 {
-    NSString* text = NSLocalizedString(@"When you start talking to someone,\n they will show up here.", @"");
+    NSString* text = NSLocalizedString(@"When there are appointments available they will show here. This app is not endorsed or affiliated with any government entity.", @"");
     
     NSMutableParagraphStyle* paragraph = [NSMutableParagraphStyle new];
     paragraph.lineBreakMode = NSLineBreakByWordWrapping;
