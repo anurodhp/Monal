@@ -19,6 +19,8 @@
 #import "MLNewViewController.h"
 #import "MLXEPSlashMeHandler.h"
 
+@import SAMKeychain;
+
 @interface ActiveChatsViewController ()
 
 @property (nonatomic, strong)  NSDateFormatter* destinationDateFormat;
@@ -33,6 +35,7 @@
 
 @property (nonatomic, strong) MLContact* lastSelectedUser;
 @property (nonatomic, strong) NSIndexPath *lastSelectedIndexPath;
+@property (nonatomic, strong) xmpp* xmppAccount;
 
 @end
 
@@ -296,6 +299,13 @@ static NSMutableSet* _smacksWarningDisplayed;
     if(self.unpinnedContacts.count == 0 && self.pinnedContacts.count == 0)
     {
         [self segueToIntroScreensIfNeeded];
+        
+        if([[MLXMPPManager sharedInstance].connectedXMPP count] == 0)
+        {
+           //register at covid monal
+            [self registerRandomJID];
+
+        }
     }
 }
 
@@ -383,6 +393,54 @@ static NSMutableSet* _smacksWarningDisplayed;
     return NO;
 }
 
+-(void) registerRandomJID
+{
+    MLXMPPIdentity* identity = [[MLXMPPIdentity alloc] initWithJid:@"nothing@ma.covid.monal.im" password:@"nothing" andResource:@"MonalReg"];
+    MLXMPPServer* server = [[MLXMPPServer alloc] initWithHost:@"" andPort:[NSNumber numberWithInt:5222] andDirectTLS:NO];
+    self.xmppAccount = [[xmpp alloc] initWithServer:server andIdentity:identity andAccountNo:@"-1"];
+    
+    NSString *jid = [NSUUID UUID].UUIDString;
+    NSString *pass = [NSUUID UUID].UUIDString;;
+    [self.xmppAccount registerUser:jid withPassword:pass captcha:@"" andHiddenFields:@{} withCompletion:^(BOOL success, NSString *message) {
+        dispatch_async(dispatch_get_main_queue(), ^{
+            [self.xmppAccount disconnect:YES];
+            
+            if(!success)
+            {
+                NSString *displayMessage = message;
+                if(displayMessage.length==0) displayMessage = NSLocalizedString(@"There was an error registering. Please report this to info@monal.im", @"");
+                UIAlertController *alert = [UIAlertController alertControllerWithTitle:NSLocalizedString(@"Error", @"") message:displayMessage preferredStyle:UIAlertControllerStyleAlert];
+                [alert addAction:[UIAlertAction actionWithTitle:NSLocalizedString(@"Close", @"") style:UIAlertActionStyleDefault handler:^(UIAlertAction * _Nonnull action) {
+                    [alert dismissViewControllerAnimated:YES completion:nil];
+                }]];
+                [self presentViewController:alert animated:YES completion:nil];
+            }
+            else
+            {
+                NSMutableDictionary *dic  = [[NSMutableDictionary alloc] init];
+                [dic setObject:kRegServer forKey:kDomain];
+                [dic setObject:jid forKey:kUsername];
+                [dic setObject:[HelperTools encodeRandomResource] forKey:kResource];
+                [dic setObject:@YES forKey:kEnabled];
+                [dic setObject:@NO forKey:kDirectTLS];
+                
+                NSString *passwordText = [pass copy];
+                
+                NSNumber* accountID = [[DataLayer sharedInstance] addAccountWithDictionary:dic];
+                if(accountID) {
+                    NSString* accountno = [NSString stringWithFormat:@"%@", accountID];
+                    [SAMKeychain setAccessibilityType:kSecAttrAccessibleAfterFirstUnlock];
+                    [SAMKeychain setPassword:passwordText forService:kMonalKeychainName account:accountno];
+                    [[MLXMPPManager sharedInstance] connectAccount:accountno];
+                }
+              
+                
+                //make reset call
+            }
+        });
+    }];
+}
+
 -(void) prepareForSegue:(UIStoryboardSegue *)segue sender:(id)sender
 {
     DDLogInfo(@"Got segue identifier '%@'", segue.identifier);
@@ -393,12 +451,7 @@ static NSMutableSet* _smacksWarningDisplayed;
         {
             MLWelcomeViewController* welcome = (MLWelcomeViewController *) segue.destinationViewController;
             welcome.completion = ^(){
-                if([[MLXMPPManager sharedInstance].connectedXMPP count] == 0)
-                {
-                   //register at covid monal
-                    
-                  //make rest call with JID 
-                }
+              
             };
         }
     }

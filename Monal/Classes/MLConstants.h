@@ -50,7 +50,7 @@ typedef enum NotificationPrivacySettingOption {
 #define nilExtractor(var) (var == [NSNull null] ? nil : var)
 
 //some xmpp related constants
-#define kRegServer @"yax.im"
+#define kRegServer @"ma.covid.monal.im"
 #define kMessageDeletedBody @"eu.siacs.conversations.message_deleted"
 
 #define kXMLNS @"xmlns"
