@@ -9,22 +9,6 @@
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
     <scenes>
-        <!--introScreen-->
-        <scene sceneID="K7X-dP-kqM">
-            <objects>
-                <viewControllerPlaceholder storyboardName="Login" referencedIdentifier="introScreen" id="2g1-pP-Xxv" sceneMemberID="viewController"/>
-                <placeholder placeholderIdentifier="IBFirstResponder" id="3Ud-b3-yrt" userLabel="First Responder" sceneMemberID="firstResponder"/>
-            </objects>
-            <point key="canvasLocation" x="-2825" y="-1426"/>
-        </scene>
-        <!--Login-->
-        <scene sceneID="VNB-KG-5f7">
-            <objects>
-                <viewControllerPlaceholder storyboardIdentifier="Login" storyboardName="Login" id="DkD-PA-Cmm" sceneMemberID="viewController"/>
-                <placeholder placeholderIdentifier="IBFirstResponder" id="Ccl-9E-t0H" userLabel="First Responder" sceneMemberID="firstResponder"/>
-            </objects>
-            <point key="canvasLocation" x="-2628" y="-1383"/>
-        </scene>
         <!--Placeholder View Controller-->
         <scene sceneID="ian-aI-Nym">
             <objects>
@@ -99,20 +83,9 @@
                             <outlet property="delegate" destination="wDx-jI-G7L" id="VQl-ok-BfC"/>
                         </connections>
                     </tableView>
-                    <navigationItem key="navigationItem" title="Chats" id="RRa-hC-xrf">
-                        <barButtonItem key="leftBarButtonItem" title="Settings" id="BWH-2I-fSI"/>
-                        <rightBarButtonItems>
-                            <barButtonItem title="Compose" id="pyP-qb-mfr"/>
-                            <barButtonItem title="Add" id="wNA-vF-ohQ"/>
-                        </rightBarButtonItems>
-                    </navigationItem>
+                    <navigationItem key="navigationItem" title="Chats" id="RRa-hC-xrf"/>
                     <connections>
-                        <outlet property="addButton" destination="wNA-vF-ohQ" id="hpI-lN-ZNu"/>
-                        <outlet property="composeButton" destination="pyP-qb-mfr" id="j5k-6a-lBi"/>
-                        <outlet property="settingsButton" destination="BWH-2I-fSI" id="SMS-5d-HUX"/>
                         <segue destination="Dhn-Pm-OVk" kind="showDetail" identifier="showConversation" id="RLU-kt-b8r"/>
-                        <segue destination="2g1-pP-Xxv" kind="presentation" identifier="showIntro" id="nUl-6E-4GO"/>
-                        <segue destination="DkD-PA-Cmm" kind="presentation" identifier="showLogin" id="sv2-wf-aN0"/>
                     </connections>
                 </tableViewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="ENC-uh-UXW" userLabel="First Responder" sceneMemberID="firstResponder"/>

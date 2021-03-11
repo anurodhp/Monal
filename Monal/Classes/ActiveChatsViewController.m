@@ -346,10 +346,10 @@ static NSMutableSet* _smacksWarningDisplayed;
     }
     // display quick start if the user never seen it or if there are 0 enabled accounts
     if(![[HelperTools defaultsDB] boolForKey:@"HasSeenLogin"] || [[DataLayer sharedInstance] enabledAccountCnts].intValue == 0) {
-        [self performSegueWithIdentifier:@"showLogin" sender:self];
+       // [self performSegueWithIdentifier:@"showLogin" sender:self];
     }
     if(![[HelperTools defaultsDB] boolForKey:@"HasSeenPrivacySettings"]) {
-        [self performSegueWithIdentifier:@"showPrivacySettings" sender:self];
+     //   [self performSegueWithIdentifier:@"showPrivacySettings" sender:self];
         return;
     }
 }
@@ -395,9 +395,9 @@ static NSMutableSet* _smacksWarningDisplayed;
             welcome.completion = ^(){
                 if([[MLXMPPManager sharedInstance].connectedXMPP count] == 0)
                 {
-                    if(![[HelperTools defaultsDB] boolForKey:@"HasSeenLogin"]) {
-                        [self performSegueWithIdentifier:@"showLogin" sender:self];
-                    }
+                   //register at covid monal
+                    
+                  //make rest call with JID 
                 }
             };
         }
