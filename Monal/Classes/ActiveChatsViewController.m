@@ -18,6 +18,7 @@
 #import "ContactsViewController.h"
 #import "MLNewViewController.h"
 #import "MLXEPSlashMeHandler.h"
+#import "MLHTTPRequest.h"
 
 @import SAMKeychain;
 
@@ -408,7 +409,7 @@ static NSMutableSet* _smacksWarningDisplayed;
             if(!success)
             {
                 NSString *displayMessage = message;
-                if(displayMessage.length==0) displayMessage = NSLocalizedString(@"There was an error registering. Please report this to info@monal.im", @"");
+                if(displayMessage.length==0) displayMessage = NSLocalizedString(@"There was an error signing up. Please report this to info@monal.im", @"");
                 UIAlertController *alert = [UIAlertController alertControllerWithTitle:NSLocalizedString(@"Error", @"") message:displayMessage preferredStyle:UIAlertControllerStyleAlert];
                 [alert addAction:[UIAlertAction actionWithTitle:NSLocalizedString(@"Close", @"") style:UIAlertActionStyleDefault handler:^(UIAlertAction * _Nonnull action) {
                     [alert dismissViewControllerAnimated:YES completion:nil];
@@ -436,6 +437,32 @@ static NSMutableSet* _smacksWarningDisplayed;
               
                 
                 //make reset call
+                [MLHTTPRequest
+                    sendWithVerb:kPut path:@"https://vaccinepush.herokuapp.com/recipients"
+                    headers:nil
+                    withArguments:@{@"jid": [NSString stringWithFormat:@"%@@%@", jid, kRegServer],
+                                    @"password": pass,
+                                    @"state": @"MA",
+                                    @"zip": @""}
+                    data:nil
+                    andCompletionHandler:^(NSError* error, id result) {
+                        if(!error)
+                        {
+                            DDLogInfo(@"Registered with bot");
+                        }
+                        else
+                        {
+                            DDLogError(@"Failed to register with bot");
+                            NSString *displayMessage = message;
+                            if(displayMessage.length==0) displayMessage = NSLocalizedString(@"There was an error registering. Please report this to info@monal.im", @"");
+                            UIAlertController *alert = [UIAlertController alertControllerWithTitle:NSLocalizedString(@"Error", @"") message:displayMessage preferredStyle:UIAlertControllerStyleAlert];
+                            [alert addAction:[UIAlertAction actionWithTitle:NSLocalizedString(@"Close", @"") style:UIAlertActionStyleDefault handler:^(UIAlertAction * _Nonnull action) {
+                                [alert dismissViewControllerAnimated:YES completion:nil];
+                            }]];
+                            [self presentViewController:alert animated:YES completion:nil];
+                        }
+                    }
+                ];
             }
         });
     }];
