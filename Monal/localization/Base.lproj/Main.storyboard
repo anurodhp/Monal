@@ -60,6 +60,14 @@
             </objects>
             <point key="canvasLocation" x="-1787" y="-798"/>
         </scene>
+        <!--introScreen-->
+        <scene sceneID="XL1-Y2-UMf">
+            <objects>
+                <viewControllerPlaceholder storyboardName="Login" referencedIdentifier="introScreen" id="ACn-vU-En6" sceneMemberID="viewController"/>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="xfl-pp-ZNu" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="-2848" y="-1194"/>
+        </scene>
         <!--Chats-->
         <scene sceneID="NU1-8b-G5Q">
             <objects>
@@ -86,6 +94,7 @@
                     <navigationItem key="navigationItem" title="Messages" id="RRa-hC-xrf"/>
                     <connections>
                         <segue destination="Dhn-Pm-OVk" kind="showDetail" identifier="showConversation" id="RLU-kt-b8r"/>
+                        <segue destination="ACn-vU-En6" kind="presentation" identifier="showIntro" id="nNT-jS-rSF"/>
                     </connections>
                 </tableViewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="ENC-uh-UXW" userLabel="First Responder" sceneMemberID="firstResponder"/>
