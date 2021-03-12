@@ -289,9 +289,9 @@ enum msgSentState {
                                                                                  target:self
                                                                                  action:@selector(showSeachButtonAction)];
     
-    NSMutableArray* rightBarButtons = [self.navigationItem.rightBarButtonItems mutableCopy];
-    [rightBarButtons addObject:seachButton];
-    self.navigationItem.rightBarButtonItems = rightBarButtons;
+//    NSMutableArray* rightBarButtons = [self.navigationItem.rightBarButtonItems mutableCopy];
+//    [rightBarButtons addObject:seachButton]; // remove encrypt 
+    self.navigationItem.rightBarButtonItems = @[seachButton];
 }
 
 -(void) showSeachButtonAction
