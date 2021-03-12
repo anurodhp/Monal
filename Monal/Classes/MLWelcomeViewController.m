@@ -48,7 +48,7 @@
     EAIntroPage* page2 = [EAIntroPage page];
     page2.title = NSLocalizedString(@"Act Qiuckly", @"");
     page2.titleColor = [UIColor darkGrayColor];
-    page2.desc = NSLocalizedString(@"You will be notified when there are appointment slots. A notification does not guarantee appointments.", @"");
+    page2.desc = NSLocalizedString(@"You will be notified when there re appointment slots. A notification does not guarantee appointments.", @"");
     if (@available(iOS 13.0, *)) {
         page2.descColor = [UIColor labelColor];
     } else {
