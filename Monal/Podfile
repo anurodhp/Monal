@@ -1,4 +1,4 @@
-project 'Monal.xcodeproj'
+project 'Vaccine Alert.xcodeproj'
 source 'https://cdn.cocoapods.org/'
  
 # Uncomment the next line to define a global platform for your project
